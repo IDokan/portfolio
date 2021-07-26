@@ -1,0 +1,27 @@
+CODING METHODS
+
+●Variable Naming Convention
+
+	○All name of variable is start with non-capital noun. After first word, if variable name has equal or more than two word next word should be a capital word. For example, names should be word kind of player, healthKit, stringTestLevel as known as Camel Case.
+	○However, boolean variable should be start with ‘be verb’ and 2nd word are same with normal variable convention. For example, isCollided, isPlayer, isButtonPushed are good.
+
+●Function Naming Convention
+
+	○Every function’s name should start with capital verb. Except first word, other things can be any english word with capital. For example, UpdateUniforms, AddComponent, FindLayer are good example to explain function naming convention.
+	○However, simple getter and setter functions have to start with capital Get or Set. For example, getter and setter should similar with GetObjectManager, SetImage, SetCollisionBoxAndObjectType.
+	○In addition, getter and setter of boolean variable have no need to start from Get or Set. They can start with be verb. For example, IsCollideWith, IsAnimated, SetIsBackground(start from set also okay, Remember no need to).
+
+●File Naming Convention
+	○There is no specific strict rule for file naming. However, every file name have to be clear enough to identify what they do. Especially in level files, they must end with the keyword ‘level’.
+
+●File Locations
+	○All of Math files have to be in Math directory. For example, vector2, vector3, matrix3.
+	○All of state and level files that are derived class of State class should be in States directory.
+	○Every object files which are child class of Object class are located in Object directory. In Object directory, they are categorized as much as cleanly.
+	○The files in the Component directory are component files that inherited by Component class.
+	○The Graphics directory is the directory that contain only graphics files. Graphics file is a the file that implemented by Graphics programmer and handled with OpenGL. The functions in Graphics files are interface of OpenGL.
+	○The Systems directory is a folder that contain all of system files. Currently, there are a FileI/O, Input, Timer, and Outline of observer event system.
+	○Every assets files should be located in Assets directory. There are sound assets, fonts, textures folder. All assets in Assets directory have to be categorized as well as possible.
+
+●Source Control
+	○We use github as source control tool and gitKraken as Git GUI. Branch names make us know what the branch is focusing on. In addition, the important and major rule for commit is that every teammates should write down what changes are in changed file and CIB (check in buddy) must be guaranteed in most of commit.

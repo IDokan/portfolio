@@ -53,9 +53,15 @@
 							<h1>CS500 Project</h1>
 							<p>In Digipen Junior year, I made ray tracing project.</p>
 							<span class="image main"><img src="images/CS500/assignment1.png" alt="" /></span>
-							<p>The first milestone, I implemented intersections between ray and objects, such as sphere, cylinder, triangle, and box.</p>
+							<p>The first milestone, I implemented intersections between ray and objects, such as sphere, cylinder, triangle, and box.<br>
+								The reason why I do this is this is a ray tracer. Unlike a real time renderer, all objects in a scene is static objects. There are no matrix calculations. However, I need intersections between ray and objects to trace ray from camera to the scene.<br>
+							    As you can see, intersections work. The complex models such as dwarf, and bunny are consist of a chunk of triangles. <br>
+								In order to increase performance, I used bounding volume hierarchy. Instead of calculating intersections with all objects, do it with bounding volume hierarchy. Thus, ideally I would expect O(log n) instead of O(n) to trace a ray.<br>
+							    Since rays return a color of intersected objects, it is a technically ray caster.</p>
 							<span class="image main"><img src="images/CS500/assignment2.png" alt="" /></span>
-							<p>The second milestone, I added ray-tracing functions. Upper image is a result of 4096 passes. There are an implicit lighting that calculates diffuse colors of rays, and an explicit lighting that calculates possibility of the portion is exposed by lightings.</p>
+							<p>The second milestone, I added ray-tracing functions. Upper image is a result of 4096 passes. <br>
+								Now ray (description about ray should be in here.)<br>
+								There are an implicit lighting that calculates diffuse colors of rays, and an explicit lighting that calculates possibility of the portion is exposed by lightings.</p>
 							<span class="image main"><img src="images/CS500/assignment3.png" alt="" /></span>
 							<p>The third milestone, I added reflection functions. It is a harmony among surface distribution, fresnel reflection, and self-shadow.</p>
 							

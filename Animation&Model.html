@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Animation and models</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">back to main</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Animations & Models</h1>
+							<p>In DigiPen's Senior courses, I took CS460 classes for animation and modeling.</p>
+							<hr>
+							<b style="font-size: 2em;">Animations</b>
+							<div class="iframe-container">
+								<iframe width="1280" height="720" src="https://www.youtube.com/embed/k_h3zYVEjtE" title="Animation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+							<br>
+							<p>In order to implement the animation player in the video, I learned Quaternion. It used because it works better with interpolation, doesn't cause gimbal lock problem, and works VQS concatenation.</p>
+							<p>Quaternion does not contain rotation information itself, but it does when the quaternion is {sin(a/2) * [x, y, z], cos(a/2)} when [x,y,z] is rotation axis, and a is the angle.</p>
+							<p>Moreover, I could study structure of animation information. Animation consists of tracks. Track is a collection of key frames of a mesh. For example, the model is a simple robotic arm consists of three parts. Then, the animation would have three tracks. Key frames are a sequence of critical point of the animation. For example, there will be three key frames(initial key frame, grab key frame, release key frame) if the animation is grabbing something. Intermediate transformations will be interpolated of the critical key frames.</p>
+
+							<hr>
+							<b style="font-size: 2em;">Arc Length and Speed Control</b>
+							<div class="iframe-container">
+								<iframe width="1280" height="720" src="https://www.youtube.com/embed/rsFnK54R32c" title="ArcLength" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+							<p>When the model has curves to walk along, the model walks smoothly the curve.</p>
+							<p>The curve is generated along the Bezier curve at the given positions. Once upon they created, arc length table will be constructed to keep information of the curve. (The arc length table will contain where the model will be at the given time.)</p>
+							<p>Once the table constructed, I have a control of the model. In the video, I applied easy-in/easy-out speed to simulate natural movements.</p>
+							<span class="image main"><img src="images/AnimationModel/Sine.png" alt="" /></span>
+							<p>As you may see, the since wave in the range of [-pi/2 : pi/2] is used for an easy-in/easy-out distance-time function for its "zero tangent slope". Thus, I used sine of [-pi/2 : 0] to acceleration part and sine of [0, pi/2] to deceleration part. It would be easily observed if you focus on the velocity located at right top corner.</p>
+							<hr>
+
+							<b style="font-size: 2em;">Inverse Kinematics</b>
+							<div class="iframe-container">
+								<iframe width="1280" height="720" src="https://www.youtube.com/embed/oVCVJcU65fQ" title="InverseKinematics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+							<p>Inverse kinematic represents moving model parts by given position. There are three solutions.</p>
+							<p>The first solution is Close Form Solution. It is an analytic method that calculates solutions by resolving a set of algebraic or geometric equation. It is easy in a simple situation. However, it became too difficult under the complex situation. For example, three or more links to the endeffector emerged in the situation. Complecity enlarges.</p>
+							<p>The second solution is Jacobian Matrix Solution. It takes the partial derivatives of forward equation with respect to time to obtain Jacobian matrix, then use an integral algorithm to resolve.</p>
+							<p>The final solution is Cyclic-Coordinate Descent Solution. It is the most practical method among the solutions. It rotates the final link to the destination and rotate the parent link and over again until the end effect directs the destination or it produce valid rotation.</p>
+							<hr>
+
+							<b style="font-size: 2em;">RigidBody Simulation</b>
+							<div class="iframe-container">
+								<iframe width="1280" height="720" src="https://www.youtube.com/embed/nNoNoUIVNLo" title="RigidBodyDynamics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+							<p>RigidBody Simulation move objects by linear and angular forces. It will affect momentums and velocities then finally at positions.</p>
+							<p>I Spring-mass-damper system to simulate elastic object.</p>
+							<p>There are only gravity force for the external forces.</p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://twitter.com/n5ZRzd9SHtj10qq" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.instagram.com/rtd990" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/IDokan" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/sinil-kang-934127198/" class="icon brands style2 fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+									<li><a href="mailto:rtd99062@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Sinil. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

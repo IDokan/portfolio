@@ -50,7 +50,7 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1><a href="https://github.com/IDokan/UnityShaderStudy">Unity Shader Study</a><br>Used Engine: Unity HLSL<br>Team size: solo project<br>Duration: three months project</h1>
+							<h1><span style = "display: block;"><a href="https://github.com/IDokan/UnityShaderStudy">Unity Shader Study</a></span><span style = "display: block;">Used Engine: Unity HLSL</span><span style = "display: block;">Team size: solo project</span><span style = "display: block;">Duration: three months project</span></h1>
 							<p>During my military service, I studied this to get used to Unity and shaders written in HLSL language.</p>
 							<div class="iframe-container">
 								<iframe width="1280" height="720" src="https://www.youtube.com/embed/UINIsyRHqf4" title="UnityShaderStudy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -58,16 +58,16 @@
 							<hr>
 							<p>First of all, I have four shaders which are applied on plane.</p>
 							<span class="image main"><img src="images/UnityShaders/plainShaders.PNG" alt="" /></span>
-							<p>Left two are grass plains. First grass with background is implemented to study UV coordinates and put two sprites together. I learned how to represent transparent and transparent mask sprite through second grass plain. Moreoever, second grass is able to move because I add modifications on vertex shader.</p>
-							<p>Fire effect was helpful to reveiw drawing transparent image and to learn how fire generally works. Actually, the last plain contains four unique images. I could learn how to use vertex color efficiently.</p>
+							<p>Left two are grass plains. First grass with background is implemented to study of manipulation over UV coordinates and put two sprites together. I learned how to represent transparent and transparent mask sprite through second grass plain. Moreoever, second grass is able to move because I add modifications on vertex shader.</p>
+							<p>The fire effect was helpful in deepening my understanding of how fire behaves. Lastly, I learned how to efficiently use vertex colors to blend four unique textures together and create a realistic dirt road texture.</p>
 							<hr>
 							<p>Moreover, I have eight different type of <a href="https://assetstore.unity.com/packages/3d/characters/robots/space-robot-kyle-4696?aid=1100l355n&gclid=Cj0KCQjwub-HBhCyARIsAPctr7wEFMbZ_gHPGieXUE7VCy0SAyv4Io7HqQJe6PmLrF7qPda2NpPc7vwaAvP2EALw_wcB&pubref=UnityAssets%2ADyn02%2A1723478829%2A67594162255%2A336277505224%2Ag%2A%2A%2Ab%2Ac%2Agclid%3DCj0KCQjwub-HBhCyARIsAPctr7wEFMbZ_gHPGieXUE7VCy0SAyv4Io7HqQJe6PmLrF7qPda2NpPc7vwaAvP2EALw_wcB&utm_source=aff">Space Robot Kyle</a>.</p>
 							<span class="image main"><image src="images/UnityShaders/kylePart1.PNG" alt="" /></span>
-							<p>Fresnel Kyle is located on the left side. A characteristic of fresnel lighting is that outside part is bright. The Kyle next to fresnel Kyle is hologram Kyle. It has bright outline and horizontal lines which moves up continually.</p>
-							<p>Third one is cubemap reflection Kyle. It reflects skybox. You might notice that skybox image on its body part. The last Kyle is toon rendering Kyle with 2 pass. First pass draws black outline from back face. Second pass draws Kyle with toon shading.</p>
+							<p>Fresnel Kyle is located on the most left side. Fresnel lighting highlights the bright areas on the outside. The Kyle next to fresnel Kyle is hologram Kyle. It has bright outline and horizontal lines which moves up continually.</p>
+							<p>The third variation is Kyle with a cubemap reflection, which reflects the surrounding skybox. You can observe the reflection of the skybox image on different parts of Kyle's body. The last version is toon-rendered Kyle, implemented using a two-pass technique. In the first pass, a black outline is drawn based on the back faces. In the second pass, Kyle is rendered with toon shading effect.</p>
 							<span class="image main"><image src="images/UnityShaders/kylePart2.PNG" alt="" /></span>
-							<p>Left Kyle looks typical Kyle but it is semi-transparent. As you might already know, hologram Kyle which covered upper description expose everything in its inside. However, this semi-transparent Kyle does not. It is implemented first pass which writes only depth value. Thus, I made improved hologram Kyle which apply depth pass on previous version.</p>
-							<p>Third one is glittering Kyle his determined parts are bright. The final Kyle is burning Kyle. Based on its parameter and given noise texture, Kyle burns out.</p>
+							<p>The left Kyle appears as the typical Kyle character but with a semi-transparent effect. Unlike the hologram Kyle mentioned earlier, which reveals every parts inside, this semi-transparent version does not. It is achieved by implementing a first pass that writes only the depth values. Building upon this concept, I created an enhanced version of the hologram Kyle by incorporating a depth pass from the previous iteration.</p>
+							<p>The third variation is Glittering Kyle, where specific parts of Kyle's body are designed to sparkle and shine brightly. The final Kyle is burning Kyle. Based on its parameter and given noise texture, Kyle burns out.</p>
 							<hr>
 							<p>The last shader I implemented is water shader.</p>
 							<span class="image main"><image src="images/UnityShaders/WaterShader.PNG" alt="" /></span>

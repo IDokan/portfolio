@@ -50,10 +50,10 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1><a href="https://github.com/IDokan/AdvancedReal-timeRenderingTechniques">Graphics Engine</a><br>Used API: OpenGL<br>Team size: solo project<br>Duration: two year project (WIP)</h1>
+							<h1><span style = "display: block;"><a href="https://github.com/IDokan/AdvancedReal-timeRenderingTechniques">Graphics Engine</a></span><span style = "display: block;">Used API: OpenGL</span><span style = "display: block;">Team size: solo project</span><span style = "display: block;">Duration: two year project (WIP)</span></h1>
 							<span class="image main"><img src="images/3DGraphicEngine/cs250horizontal.PNG" alt="" /></span>
 							<p>In Digipen Sophomore year, I've made my first 3D graphic engine which is written in OpenGL.</p>
-							<p>I could learned <a href="https://youtube.com/playlist?list=PLNVbJvAbUd2anjDFhJQ-qfHzgBSAFWY1h">essentials of 3D Graphics concepts</a> such as transformations from model to ndc coordinates, Graphics Pipeline, shadows, camera, and communicating between user's input and objects.</p>
+							<p>I learned <a href="https://youtube.com/playlist?list=PLNVbJvAbUd2anjDFhJQ-qfHzgBSAFWY1h">the essential concepts of 3D Graphics</a>, including transformations from model to NDC coordinates, the Graphics Pipeline, shadows, cameras, and communicating between user's input and objects.</p>
 							<p>Furthermore, I implemented a blinn-phong shading and a directional light projection shadow in this project for shading essentials.</p>
 							
 							<hr>
@@ -65,7 +65,7 @@
 							<span class="image main"><img src="images/CS300/assignment2.PNG" alt="" /></span>
 							<p>The second milestone, I implemented three shaders and applied dynamic lightings.</p>
 							<p>I implemented Phong Lighting, Phong Shading, and Blinn Shading.</p>
-							<p>Phong Lighting calculates diffuse and specular colors by calculating reflection vector(which has expensive costs) in vertex shader. They are occured in vertex shader. Phong Shading is technically the same with Phong Lighting, but lighting calculations are processed in fragment shader. Blinn Shading used half vector instead of reflection vector in fragment shader.</p>
+							<p>Phong Lighting computes diffuse and specular colors by calculating reflection vector in vertex shader. Phong Shading, technically similar to Phong lighting, performs lighting calculations in the fragment shader. In contrast, Blinn shading utilizes the half vector instead of the reflection vector in the fragment shader. As a conclusion of shading discussion, Blinn-Phong shading provides similar results to Phonng shading but is computationally more efficient, as it avoids the need for costly reflection vector calculations.</p>
 							<p>I used uniform block to send lighting information to GPU.</p>
 							
 							<span class="image main"><img src="images/CS300/assignment3_Reflection.PNG" alt="" /></span>
@@ -75,15 +75,15 @@
 							<p>Furthermore, I used Fresnel approximation(Schlick's method) to combine reflection, and refraction together.</p>
 
 							<span class="image main"><img src="images/CS300/assignment4.PNG" alt="" /></span>
-							<p>The fourth milestone, I improve object loader, and implement deferred rendering.</p>
+							<p>The fourth milestone, I improved object loader, and implemented deferred rendering.</p>
 							<p>Now object loader used Assimp to load assets. Thus, the engine does not restrict assets file format as long as Assimp supports.</p>
-							<p>The picture above represents deferred rendering. Four small images of the main window represented position, UV, normal, distance from camera(left to right). Deferred rendering renders all objects first and produces image such like the four images in first pass. After then, combine the four images together using lighting information in second pass. Lighting calculations are done in only second pass. It enhanced rendering time. Reduced time by deferred rendering increases if there are many objects, and lights. Cons of deferred rendering are increased memory usage by G-buffer, and it needs more work to support multiple materials and transparency.</p>
+							<p>The image provided illustrates deferred rendering, where the below small four images representing position, UV, normal, and camera-distance from the left to right. In deferred rendering, all objects are initially rendered, generating images similar to the four mentioned above in the first pass. In the second pass, the four images are combined, and the lighting calculations are performed exclusively during this pass. Deferred rendering improves rendering time, particularly when there are numerous objects and lights. However, it comes with drawbacks such as increased memory usage due to the G-buffer and the need for additional effort to support multiple materials and transparency.</p>
 
 							<hr>
 							
 							<b>Enhanced lightings</b>
 							<span class="image main"><img src="images/CS300/lightRange.PNG" alt="" /></span>
-							<p>Draw spheres for range of lights. Then calculates local lights in fragment shader to reduce the number of pixels where does not lighting affects.</p>
+							<p>Spheres are drawn to represent the range of lights. In the fragment shader, local lights are calculated only in the spheres where lighting has an effect, reducing unnecessary computations.</p>
 							<b>Soft shadow</b>
 							<span class="image main"><img src="images/CS300/blurBeforeShadowMap.PNG" alt="" /></span>
 							<p>Creat shadow maps storing depth value by the perspective of sun, then apply blur using summed-area-table. Thus, I could produce soft shadow like the image below.</p>

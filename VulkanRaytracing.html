@@ -50,18 +50,20 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Vulkan Ray Tracer<br>Used API: Vulkan<br>Team size: Solo project<br>Duration: half year</h1>
+							<h1><span style = "display: block;">Vulkan Ray Tracer</span><span style = "display: block;">Used API: Vulkan</span><span style = "display: block;">Team size: Solo project</span><span style = "display: block;">Duration: half year</span></h1>
 							<div class="iframe-container">
 								<iframe width="1280" height="720" src="https://www.youtube.com/embed/gYJhbNIYgxo" title="Vulkan Real-time Ray Tracer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 							</div>
 							<p>In Digipen Senior year, I made an Vulkan GPU ray tracing project.</p>
 							<span class="image main"><img src="images/VulkanRaytracer/m1.png" alt="" /></span>
-							<p>The first milestone, I implemented accumulating ray tracing data if camera does not move. Depending on the flag passed by Push Constants, it determines accumulating data from whether previous frame or not.</p>
+							<p>The first milestone, I implemented accumulating ray tracing data if camera does not move. Depending on the flag passed via Push Constants, the program determines whether to accumulate data from the previous frame or not.</p>
 							<span class="image main"><img src="images/VulkanRaytracer/m2.png" alt="" /></span>
 							<p>The second milestone, I managed light connections. It had ray generate shader, ray closest hit shader, and ray miss shader. It starts from the ray generate shader and proceed the ray closest shader or ray miss shader.</p>
+							<span class="image main"><img src="images/VulkanRaytracer/raytracingPipeline.png"></span>
+							<p>Providing pipeline of ray tracing might help understanding the functionality of the three shaders.</p>
 							<span class="image main"><img src="images/VulkanRaytracer/tmp1.png" alt="" /></span>
 							<p>The third milestone, I applied edge avoiding A-Trous filter to denoise the image. It simply iterates and merge neighbors color data based on normal vector on the color.</p>
-							<p>Ray tracer mode is the flag to toggle ray tracer mode or ray caster mode. Denoise Mode is the flag to toggle A-Trous filter. Multiplier is an obsolete parameter. Normal and Depth Threshold is denoise parameters to determine whether include the color or not. Atrous Iterations is the number of iterations to conduct the denoise algorithm. Lumen, Depth, Normal factors are denoise parameters to how much affect the previous data.</p>
+							<p>Ray tracer mode is the flag to toggle ray tracer mode or ray caster mode. Denoise Mode is the flag to toggle A-Trous filter. The multiplier is a parameter that influences the extent to which the current ray-traced color contributes to the final result. The normal and depth threshold parameters determine whether to include the previous color in the result accumulation. Atrous Iterations is the number of iterations to conduct the denoise algorithm. Lumen, Depth, Normal factors are denoise parameters to how much affect the previous data.</p>
 							
 
 						</div>

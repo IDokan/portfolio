@@ -50,20 +50,20 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>OpenGL Ray Tracer<br>Used API: OpenGL<br>Team size: solo project<br>Duration: half year project</h1>
+							<h1><span style = "display: block;">OpenGL Ray Tracer</span><span style = "display: block;">Used API: OpenGL</span><span style = "display: block;">Team size: solo project</span><span style = "display: block;">Duration: half year project</span></h1>
 							<p>In Digipen Junior year, I made an OpenGL CPU ray tracing project.</p>
 							<span class="image main"><img src="images/CS500/assignment1.png" alt="" /></span>
 							<p>The first milestone, I implemented intersections between ray and objects, such as sphere, cylinder, triangle, and box.<br>
-								The reason why I do this is this is a ray tracer. Unlike a real time renderer, all objects in a scene is static objects. There are no matrix calculations. However, I need intersections between ray and objects to trace ray from camera to the scene.<br>
-							    As you can see, intersections work. The complex models such as dwarf, and bunny are consist of a chunk of triangles. <br>
+								The reason why I do this is a ray tracer. Unlike a real time renderer, all objects in a scene is static objects. There are no matrix calculations. However, I need intersections between ray and objects to trace ray from camera to the scene.<br>
+							    Complex models like the dwarf and bunny are composed of numerous triangles, so their intersection calculations typically involve triangle intersections rather than more complex operations.<br>
 								In order to increase performance, I used bounding volume hierarchy. Instead of calculating intersections with all objects, do it with bounding volume hierarchy. Thus, ideally I would expect O(log n) instead of O(n) to trace a ray.<br>
-							    Since rays return a color of intersected objects, it is a technically ray caster.</p>
+								Given that rays return the color of intersected objects, it becomes challenging to deny the classification of the system as a ray tracer.</p>
 							<span class="image main"><img src="images/CS500/assignment2.png" alt="" /></span>
 							<p>The second milestone, I added ray-tracing functions. Upper image is a result of 4096 passes. <br>
-								Now ray (description about ray should be in here.)<br>
-								There are an implicit lighting that calculates diffuse colors of rays, and an explicit lighting that calculates possibility of the portion is exposed by lightings.</p>
+								Now, the ray delivers information about intersections, including data about the intersected object, the length of the ray, and the position of intersection in world coordinates.<br>
+								There is both implicit lighting, which includes the diffuse color data of the intersected object, and explicit lighting, which determines the extent to which a portion is exposed to lighting.</p>
 							<span class="image main"><img src="images/CS500/assignment3.png" alt="" /></span>
-							<p>The third milestone, I added reflection functions. It is a harmony among surface distribution, fresnel reflection, and self-shadow.</p>
+							<p>In the third milestone, I introduced reflection functions, which establish a harmonious interplay between surface distribution, Fresnel reflection, and self-shadowing effects.</p>
 							
 
 						</div>
